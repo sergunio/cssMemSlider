@@ -20,7 +20,7 @@ body {
     font-family: "Georgia";
     font-size: 32px;
     font-weight: 400;
-    line-height: 35.2px;
+    line-height: 90px;
     color: #161615;
     letter-spacing: 0.06em;
 }
@@ -42,7 +42,6 @@ h1{
     padding: 2rem;
     overflow: hidden;
     background-color: #f5f264;
-    /* border-radius: 2rem; */
 }
 
 .wrapper__slides{
@@ -52,8 +51,7 @@ h1{
 
 .slides{
     display: flex;
-    gap: 1.5rem;
-    width: calc(85vw * 2);
+    width: calc(64rem * 4);
     height: 60vh;
     padding: 2rem 0;
     transition: transform 0.5s ease-in-out;
@@ -68,12 +66,20 @@ h1{
     background-size: contain;
 }
 
-.slide1{
+.mem1{
     background-image: url(./img/1.jpg);
 }
 
-.slide2{
+.mem2{
     background-image: url(./img/2.jpg);
+}
+
+.mem3{
+    background-image: url(./img/3.jpg);
+}
+
+.mem4{
+    background-image: url(./img/4.jpg);
 }
 
 #slideBtn1:checked ~ .wrapper__slides .slides {
@@ -81,15 +87,15 @@ h1{
 }
 
 #slideBtn2:checked ~ .wrapper__slides .slides {
-    transform: translateX(-20%);
+    transform: translateX(-25%);
 }
 
 #slideBtn3:checked ~ .wrapper__slides .slides {
-    transform: translateX(-40%);
+    transform: translateX(-50%);
 }
 
 #slideBtn4:checked ~ .wrapper__slides .slides {
-    transform: translateX(-60%);
+    transform: translateX(-75%);
 }
 .wrapper__text {
     height: 4.5rem;
@@ -97,12 +103,12 @@ h1{
 }
 
 .text {
-    /* opacity: 0; */
+    opacity: 0;
     font-family: 'Georgia', sans-serif;
-    font-size: 1.5rem;
-    line-height: 1.5rem;
+    font-size: 28px;
+    line-height: 24px;
     color: #000000;
-    /* transition: 0.7s ease-in-out; */
+    transition: 0.7s ease-in-out;
     height: 4.5rem;
 }
 .nav {
@@ -121,16 +127,37 @@ h1{
     height: 1rem;
     border: 3px solid #000000;
     background-color: #000000;
-    transition: 0.9s ease-in-out;
+    transition: 0.7s ease-in-out;
+    border-radius: 50%;
 }
 
 .nav__btn:hover .button {
-    border: 3px solid rgb(255, 255, 255);
+    border: 4px solid rgb(255, 255, 255);
     background-color: rgb(255, 255, 255);
 }
 
 .nav__btn:active .button {
-    transform: scale(0.5);
+    transform: scale(0.3);
+}
+
+#slideBtn1:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#slideBtn2:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-4.5rem);
+}
+
+#slideBtn3:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-9rem);
+}
+
+#slideBtn4:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-13.5rem);
 }
 
 @font-face {

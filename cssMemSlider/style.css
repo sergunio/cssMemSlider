@@ -66,8 +66,8 @@ h1{
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-    /* filter: drop-shadow(0 0 0.8rem #0B0E1B); */
 }
+
 .slide1{
     background-image: url(./img/1.jpg);
 }

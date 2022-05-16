@@ -1,0 +1,15 @@
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./font/arial.ttf') format('ttf'),
+        }
+
+@font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./font/georgia.ttf') format('ttf'),
+        }  

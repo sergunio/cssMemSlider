@@ -1,0 +1,207 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    display: none;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    background-color: #bdc1cf;
+    flex-direction: column;
+}
+
+.header{
+    display: flex;
+    font-style: normal;
+    font-family: "Georgia";
+    font-size: 32px;
+    font-weight: 400;
+    line-height: 70px;
+    color: #161615;
+    letter-spacing: 0.06em;
+}
+
+h1{
+    font-weight: 700;
+    font-size: 2rem;
+    text-align: center;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    row-gap: 2rem;
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    overflow: hidden;
+    background-color: #f5f264;
+}
+
+.wrapper__slides{
+    width: 80vw;
+    overflow: hidden;
+}
+
+.slides{
+    display: flex;
+    width: calc(80vw * 4);
+    height: 60vh;
+    padding: 2rem 0;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide{
+    width: 100%;
+    height: 100%;
+    display: block;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+}
+
+.mem1{
+    background-image: url(./img/1.jpg);
+}
+
+.mem2{
+    background-image: url(./img/2.jpg);
+}
+
+.mem3{
+    background-image: url(./img/3.jpg);
+}
+
+.mem4{
+    background-image: url(./img/4.jpg);
+}
+
+#slideBtn1:checked ~ .wrapper__slides .slides {
+    transform: translateX(0);
+}
+
+#slideBtn2:checked ~ .wrapper__slides .slides {
+    transform: translateX(-25%);
+}
+
+#slideBtn3:checked ~ .wrapper__slides .slides {
+    transform: translateX(-50%);
+}
+
+#slideBtn4:checked ~ .wrapper__slides .slides {
+    transform: translateX(-75%);
+}
+.wrapper__text {
+    height: 2.5rem;
+    overflow: hidden;
+}
+
+.text {
+    opacity: 0;
+    font-family: 'Georgia', sans-serif;
+    font-size: 28px;
+    line-height: 24px;
+    color: #000000;
+    transition: 0.7s ease-in-out;
+    height: 4.5rem;
+}
+.nav {
+    display: flex;
+    margin-bottom: 1.8rem;
+}
+
+.nav__btn {
+    display: flex;
+    padding: 0 0.7rem;
+    cursor: pointer;
+}
+
+.button {
+    width: 1rem;
+    height: 1rem;
+    border: 3px solid #000000;
+    background-color: #000000;
+    transition: 0.7s ease-in-out;
+    border-radius: 50%;
+}
+
+.nav__btn:hover .button {
+    border: 4px solid rgb(14, 13, 13);
+    background-color: rgb(255, 255, 255);
+}
+
+.nav__btn:active .button {
+    transform: scale(0.3);
+}
+
+#slideBtn1:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+#slideBtn2:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-4.5rem);
+}
+
+#slideBtn3:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-9rem);
+}
+
+#slideBtn4:checked ~ .wrapper__text .text {
+    opacity: 1;
+    transform: translateY(-13.5rem);
+}
+
+#slideBtn1:checked ~ .nav .btn1 .button {
+    background-color: transparent;
+}
+
+#slideBtn2:checked ~ .nav .btn2 .button {
+    background-color: transparent;
+}
+
+#slideBtn3:checked ~ .nav .btn3 .button {
+    background-color: transparent;
+}
+
+#slideBtn4:checked ~ .nav .btn4 .button {
+    background-color: transparent;
+}
+
+@media (max-width: 1050px) {
+    .container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    .wrapper__text{
+        order: 1;
+    }
+}
+
+@font-face {
+    font-family: 'Arial';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./font/arial.ttf') format('ttf'),
+        }
+
+@font-face {
+    font-family: 'Georgia';
+    font-style: normal;
+    font-weight: 400;
+    src: local(''),
+        url('./font/georgia.ttf') format('ttf'),
+        }  
